@@ -25,9 +25,6 @@ python manage.py runserver
 # for a postgresql database
 pip install psycopg2
 
-# for a mysql database
-pip install MySQL-python
-
 # for use on heroku
 pip install gunicorn dj-database-url
 
