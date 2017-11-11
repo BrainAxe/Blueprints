@@ -1,5 +1,6 @@
 <h1> Django Help </h1>
 A guide for creating a Django project for use
+<br>
 
 <b>Start A Project</b>
 
