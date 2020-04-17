@@ -1,10 +1,10 @@
 ## Directory Structure
 
-    odoo_docker
-    	-- addons/   #   <---- custom_addons are here
-    	-- db.env
-    	-- docker-compose.yml
-    	-- odoo.env
+     odoo_docker/
+       -- addons/   #   <---- custom_addons are here
+       -- db.env
+       -- docker-compose.yml
+       -- odoo.env
 	
 
 
