@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  web:
+    image: odoo:11.0
+    container_name: odoo-11
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    volumes:
+      - odooWEB_data:/var/lib/odoo
+      - ./addons:/mnt/extra-addons
+    env_file:
+      - odoo.env
+    environment:
+      - DB_USER:"${DB_USER}"
+      - DB_PASS:"${DB_PASS}"
+      - DB_NAME:"${DB_NAME}"
+      - ADMIN_PASSWD:"${ADMIN_PASSWD}"
+
+  db:
+    image: postgres:10-alpine
+    container_name: odoo-DB
+    env_file:
+      - db.env
+    environment:
+      - POSTGRES_USER:"${POSTGRES_USER}"
+      - POSTGRES_PASSWORD:"${POSTGRES_PASSWORD}"
+      - POSTGRES_DB:"${POSTGRES_DB}"
+    volumes:
+      - odooDB_data:/var/lib/postgresql/data/
+    ports:
+      - "3939:5432"
+
+volumes:
+  odooWEB_data:
+  odooDB_data:
