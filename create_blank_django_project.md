@@ -11,7 +11,7 @@ cd FolderName
 virtualenv .
 source bin/activate
 pip install django
-django-admin.py startproject ProjectName
+django-admin startproject ProjectName
 python manage.py migrate
 python manage.py runserver
 python manage.py createsuperuser
@@ -23,7 +23,7 @@ python manage.py runserver
 
 ```
 # for a postgresql database
-pip install psycopg2
+pip install psycopg2-binary
 
 # for use on heroku
 pip install gunicorn dj-database-url
